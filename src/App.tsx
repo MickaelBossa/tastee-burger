@@ -1,9 +1,10 @@
 import './App.css';
+import LoginPage from './components/pages/LoginPage/LoginPage';
 
 function App() {
     return (
         <div className="App">
-            <header className="App-header">Tastee Burger</header>
+            <LoginPage />
         </div>
     );
 }
