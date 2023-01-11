@@ -5,7 +5,6 @@ export default function LoginForm() {
 
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
-        alert(`Bonjour ${inputValue}`);
         setInputValue('');
     };
 
