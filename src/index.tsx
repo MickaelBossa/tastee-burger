@@ -4,11 +4,13 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import LoginPage from './components/pages/LoginPage/LoginPage';
+import ErrorPage from './components/pages/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <LoginPage />,
+        errorElement: <ErrorPage />,
     },
 ]);
 
