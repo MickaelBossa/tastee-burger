@@ -1,14 +1,10 @@
-import { Link } from 'react-router-dom';
+import BackButton from '../../BackButton/BackButton';
 
 export default function ErrorPage() {
     return (
         <div>
             <h1>ErrorPage</h1>
-            <button>
-                <Link to={'/'} style={{ textDecoration: 'none' }}>
-                    Retourner à la page d'accueil
-                </Link>
-            </button>
+            <BackButton buttonText="Retourner à la page d'accueil" />
         </div>
     );
 }
