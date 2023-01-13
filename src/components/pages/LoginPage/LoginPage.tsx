@@ -13,8 +13,5 @@ export default function LoginPage() {
 
 const LoginPageStyled = styled.div`
     height: 100vh;
-    background-image: url('/images/burger-background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), center / cover no-repeat url('/images/burger-background.jpg');
 `;

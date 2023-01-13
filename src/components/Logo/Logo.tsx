@@ -12,17 +12,16 @@ export default function Logo() {
 }
 
 const LogoStyled = styled.h1`
-    background: yellow;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: ${theme.spacing.xl};
-    margin-bottom: ${theme.spacing.sm};
+    margin-bottom: ${theme.spacing.lg};
     font-family: 'Amatic SC';
-    font-size: ${theme.fonts.P6};
+    font-size: ${theme.fonts.P7};
     color: ${theme.colors.primary_burger};
 
     img {
-        width: 10vw;
+        width: 15vw;
     }
 `;
