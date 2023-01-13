@@ -27,7 +27,7 @@ export default function LoginForm() {
                 value={inputValue}
             />
             <button aria-label="Accéder à votre espace">
-                Accédez à votre espace
+                Accédez à mon espace
             </button>
         </form>
     );
