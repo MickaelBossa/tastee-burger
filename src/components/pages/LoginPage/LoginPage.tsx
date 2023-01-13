@@ -12,6 +12,9 @@ export default function LoginPage() {
 }
 
 const LoginPageStyled = styled.div`
-    background: red;
     height: 100vh;
+    background-image: url('/images/burger-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 `;
