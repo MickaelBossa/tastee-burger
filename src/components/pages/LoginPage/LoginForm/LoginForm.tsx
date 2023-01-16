@@ -23,7 +23,7 @@ export default function LoginForm() {
         <LoginFormStyled action="submit" onSubmit={handleSubmit}>
             <h1>Bienvenue chez nous !</h1>
             <h2>Connectez vous</h2>
-            <LoginInput inputValue={inputValue} handleChange={handleChange} />
+            <LoginInput value={inputValue} onChange={handleChange} />
             <LoginButton />
         </LoginFormStyled>
     );

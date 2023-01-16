@@ -3,14 +3,11 @@ import styled from 'styled-components';
 import { theme } from '../../../../../theme/index';
 
 interface LoginInputProps {
-    inputValue: string;
-    handleChange: React.ChangeEventHandler<HTMLInputElement>;
+    value: string;
+    onChange: React.ChangeEventHandler<HTMLInputElement>;
 }
 
-export default function LoginInput({
-    inputValue,
-    handleChange,
-}: LoginInputProps) {
+export default function LoginInput({ value, onChange }: LoginInputProps) {
     return (
         <LoginInputStyled>
             <BsPersonCircle className="iconPerson" />
@@ -18,8 +15,8 @@ export default function LoginInput({
                 type="text"
                 required
                 placeholder="Entrez votre prénom"
-                onChange={handleChange}
-                value={inputValue}
+                onChange={onChange}
+                value={value}
             />
         </LoginInputStyled>
     );
