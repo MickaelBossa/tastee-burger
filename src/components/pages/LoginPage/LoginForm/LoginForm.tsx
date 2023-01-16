@@ -61,6 +61,8 @@ const LoginFormStyled = styled.form`
 
     .inputContainer {
         position: relative;
+        background-color: ${theme.colors.white};
+        border-radius: ${theme.borderRadius.round};
     }
 
     .iconPerson {
@@ -72,12 +74,12 @@ const LoginFormStyled = styled.form`
 
     input {
         height: ${theme.spacing.xl};
-        width: 100%;
-        border-radius: ${theme.borderRadius.round};
+        width: 75%;
+        border: none;
+    }
 
-        ::placeholder {
-            padding-left: 15%;
-        }
+    input:focus {
+        outline: none;
     }
 
     button {
