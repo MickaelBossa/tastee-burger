@@ -1,28 +1,37 @@
-import { BsPersonCircle } from 'react-icons/bs';
+import React from 'react';
 import styled from 'styled-components';
-import { theme } from '../../../../../theme/index';
+import { theme } from '../../theme/index';
 
-interface LoginInputProps {
+interface TextInputProps {
     value: string;
     onChange: React.ChangeEventHandler<HTMLInputElement>;
+    required: boolean;
+    placeholder: string;
+    Icon: React.ReactElement;
 }
 
-export default function LoginInput({ value, onChange }: LoginInputProps) {
+export default function TextInput({
+    value,
+    onChange,
+    required,
+    placeholder,
+    Icon,
+}: TextInputProps) {
     return (
-        <LoginInputStyled>
-            <BsPersonCircle className="iconPerson" />
+        <TextInputStyled>
+            <div className="iconPerson">{Icon}</div>
             <input
                 type="text"
-                required
-                placeholder="Entrez votre prénom"
+                required={required}
+                placeholder={placeholder}
                 onChange={onChange}
                 value={value}
             />
-        </LoginInputStyled>
+        </TextInputStyled>
     );
 }
 
-const LoginInputStyled = styled.div`
+const TextInputStyled = styled.div`
     position: relative;
     background-color: ${theme.colors.white};
     border-radius: ${theme.borderRadius.round};

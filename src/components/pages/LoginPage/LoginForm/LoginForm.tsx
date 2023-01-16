@@ -2,8 +2,9 @@ import { ChangeEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { theme } from '../../../../theme';
-import LoginInput from './LoginInput/LoginInput';
+import TextInput from '../../../../ui/TextInput/TextInput';
 import LoginButton from './LoginButton/LoginButton';
+import { BsPersonCircle } from 'react-icons/bs';
 
 export default function LoginForm() {
     const [inputValue, setInputValue] = useState<string>('');
@@ -23,7 +24,13 @@ export default function LoginForm() {
         <LoginFormStyled action="submit" onSubmit={handleSubmit}>
             <h1>Bienvenue chez nous !</h1>
             <h2>Connectez vous</h2>
-            <LoginInput value={inputValue} onChange={handleChange} />
+            <TextInput
+                value={inputValue}
+                onChange={handleChange}
+                required={true}
+                placeholder={'Entrez votre prénom'}
+                Icon={<BsPersonCircle />}
+            />
             <LoginButton />
         </LoginFormStyled>
     );
