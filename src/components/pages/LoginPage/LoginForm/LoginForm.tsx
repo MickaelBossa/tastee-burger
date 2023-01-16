@@ -94,6 +94,15 @@ const LoginFormStyled = styled.form`
         align-items: center;
     }
 
+    button:focus,
+    button:active,
+    button:hover {
+        background-color: ${theme.colors.white};
+        color: ${theme.colors.primary};
+        border: 1px solid ${theme.colors.primary};
+        cursor: pointer;
+    }
+
     .chevronRight {
         width: ${theme.fonts.P4};
     }
