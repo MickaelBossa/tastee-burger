@@ -1,16 +1,20 @@
-import { BsChevronRight } from 'react-icons/bs';
 import styled from 'styled-components';
-import { theme } from '../../../../../theme';
+import { theme } from '../../theme';
 
-export default function LoginButton() {
+interface SubmitButtonProps {
+    Icon: React.ReactElement;
+    label: string;
+}
+
+export default function SubmitButton({ Icon, label }: SubmitButtonProps) {
     return (
-        <LoginButtonStyled aria-label="Accéder à votre espace">
-            Accédez à mon espace <BsChevronRight className="chevronRight" />
-        </LoginButtonStyled>
+        <SubmitButtonStyled aria-label="Accéder à votre espace">
+            {label} <div className="chevronRight">{Icon}</div>
+        </SubmitButtonStyled>
     );
 }
 
-const LoginButtonStyled = styled.button`
+const SubmitButtonStyled = styled.button`
     height: ${theme.spacing.xl};
     background-color: ${theme.colors.primary};
     border: none;
@@ -31,6 +35,6 @@ const LoginButtonStyled = styled.button`
     }
 
     .chevronRight {
-        width: ${theme.fonts.P4};
+        padding-left: ${theme.spacing.xxs};
     }
 `;

@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { theme } from '../../../../theme';
 import TextInput from '../../../../ui/TextInput/TextInput';
-import LoginButton from './LoginButton/LoginButton';
-import { BsPersonCircle } from 'react-icons/bs';
+import { BsPersonCircle, BsChevronRight } from 'react-icons/bs';
+import SubmitButton from '../../../../ui/SubmitButton/SubmitButton';
 
 export default function LoginForm() {
     const [inputValue, setInputValue] = useState<string>('');
@@ -31,7 +31,10 @@ export default function LoginForm() {
                 placeholder={'Entrez votre prénom'}
                 Icon={<BsPersonCircle />}
             />
-            <LoginButton />
+            <SubmitButton
+                label={'Accédez à mon espace'}
+                Icon={<BsChevronRight />}
+            />
         </LoginFormStyled>
     );
 }
