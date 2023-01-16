@@ -2,7 +2,8 @@ import { ChangeEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { theme } from '../../../../theme';
-import { BsPersonCircle, BsChevronRight } from 'react-icons/bs';
+import { BsChevronRight } from 'react-icons/bs';
+import LoginInput from './LoginInput/LoginInput';
 
 export default function LoginForm() {
     const [inputValue, setInputValue] = useState<string>('');
@@ -22,16 +23,7 @@ export default function LoginForm() {
         <LoginFormStyled action="submit" onSubmit={handleSubmit}>
             <h1>Bienvenue chez nous !</h1>
             <h2>Connectez vous</h2>
-            <div className="inputContainer">
-                <BsPersonCircle className="iconPerson" />
-                <input
-                    type="text"
-                    required
-                    placeholder="Entrez votre prénom"
-                    onChange={handleChange}
-                    value={inputValue}
-                />
-            </div>
+            <LoginInput inputValue={inputValue} handleChange={handleChange} />
             <button aria-label="Accéder à votre espace">
                 Accédez à mon espace <BsChevronRight className="chevronRight" />
             </button>
@@ -57,29 +49,6 @@ const LoginFormStyled = styled.form`
         font-size: ${theme.fonts.P4};
         margin-top: ${theme.spacing.md};
         margin-bottom: ${theme.spacing.sm};
-    }
-
-    .inputContainer {
-        position: relative;
-        background-color: ${theme.colors.white};
-        border-radius: ${theme.borderRadius.round};
-    }
-
-    .iconPerson {
-        position: absolute;
-        top: 35%;
-        left: 5%;
-        color: ${theme.colors.greyBlue};
-    }
-
-    input {
-        height: ${theme.spacing.xl};
-        width: 75%;
-        border: none;
-    }
-
-    input:focus {
-        outline: none;
     }
 
     button {
