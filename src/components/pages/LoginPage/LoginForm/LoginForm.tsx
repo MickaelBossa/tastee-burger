@@ -2,8 +2,8 @@ import { ChangeEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { theme } from '../../../../theme';
-import { BsChevronRight } from 'react-icons/bs';
 import LoginInput from './LoginInput/LoginInput';
+import LoginButton from './LoginButton/LoginButton';
 
 export default function LoginForm() {
     const [inputValue, setInputValue] = useState<string>('');
@@ -24,9 +24,7 @@ export default function LoginForm() {
             <h1>Bienvenue chez nous !</h1>
             <h2>Connectez vous</h2>
             <LoginInput inputValue={inputValue} handleChange={handleChange} />
-            <button aria-label="Accéder à votre espace">
-                Accédez à mon espace <BsChevronRight className="chevronRight" />
-            </button>
+            <LoginButton />
         </LoginFormStyled>
     );
 }
@@ -49,30 +47,5 @@ const LoginFormStyled = styled.form`
         font-size: ${theme.fonts.P4};
         margin-top: ${theme.spacing.md};
         margin-bottom: ${theme.spacing.sm};
-    }
-
-    button {
-        height: ${theme.spacing.xl};
-        background-color: ${theme.colors.primary};
-        border: none;
-        border-radius: ${theme.borderRadius.round};
-        color: ${theme.colors.white};
-        margin-top: ${theme.spacing.sm};
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    button:focus,
-    button:active,
-    button:hover {
-        background-color: ${theme.colors.white};
-        color: ${theme.colors.primary};
-        border: 1px solid ${theme.colors.primary};
-        cursor: pointer;
-    }
-
-    .chevronRight {
-        width: ${theme.fonts.P4};
     }
 `;

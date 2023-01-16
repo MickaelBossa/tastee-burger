@@ -2,13 +2,15 @@ import { BsPersonCircle } from 'react-icons/bs';
 import styled from 'styled-components';
 import { theme } from '../../../../../theme/index';
 
+interface LoginInputProps {
+    inputValue: string;
+    handleChange: React.ChangeEventHandler<HTMLInputElement>;
+}
+
 export default function LoginInput({
     inputValue,
     handleChange,
-}: {
-    inputValue: string;
-    handleChange: React.ChangeEventHandler<HTMLInputElement>;
-}) {
+}: LoginInputProps) {
     return (
         <LoginInputStyled>
             <BsPersonCircle className="iconPerson" />
