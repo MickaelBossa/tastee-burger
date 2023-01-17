@@ -1,10 +1,13 @@
-import BackButton from '../../BackButton/BackButton';
+import BackButton from '../../../ui/BackButton/BackButton';
 
 export default function ErrorPage() {
     return (
         <div>
             <h1>ErrorPage</h1>
-            <BackButton buttonText="Retourner à la page d'accueil" />
+            <BackButton
+                buttonLink="/"
+                buttonText="Retourner à la page d'accueil"
+            />
         </div>
     );
 }

@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import BackButton from '../../BackButton/BackButton';
+import BackButton from '../../../ui/BackButton/BackButton';
 
 export default function OrderPage() {
     const { username } = useParams();
@@ -7,7 +7,7 @@ export default function OrderPage() {
     return (
         <div>
             <h1>Bonjour {username}</h1>
-            <BackButton buttonText="Déconnexion" />
+            <BackButton buttonLink="/" buttonText="Déconnexion" />
         </div>
     );
 }
