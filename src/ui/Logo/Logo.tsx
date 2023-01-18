@@ -15,13 +15,16 @@ const LogoStyled = styled.h1`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: ${theme.spacing.xl};
-    margin-bottom: ${theme.spacing.lg};
     font-family: 'Amatic SC';
-    font-size: ${theme.fonts.P7};
+    font-size: ${theme.fonts.P6};
     color: ${theme.colors.primary_burger};
+    padding-top: ${theme.spacing.xl};
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+    scale: 2;
 
     img {
-        width: 15vw;
+        width: 7vw;
     }
 `;
