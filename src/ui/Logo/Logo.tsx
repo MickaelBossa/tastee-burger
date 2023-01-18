@@ -18,9 +18,7 @@ const LogoStyled = styled.h1`
     font-family: 'Amatic SC';
     font-size: ${theme.fonts.P6};
     color: ${theme.colors.primary_burger};
-    padding-top: ${theme.spacing.xl};
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
     width: 50%;
     scale: 2;
 
