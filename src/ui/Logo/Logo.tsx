@@ -5,7 +5,7 @@ export default function Logo() {
     return (
         <LogoStyled>
             Crazee
-            <img src={'./images/logo-orange.png'} alt="Logo de tastee burger" />
+            <img src={'/images/logo-orange.png'} alt="Logo de tastee burger" />
             Burger
         </LogoStyled>
     );
