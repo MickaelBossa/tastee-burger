@@ -10,7 +10,7 @@ export default function Navbar() {
 
     return (
         <NavbarStyled>
-            <Logo className="" />
+            <Logo />
             <div className="rightSubcontainer">
                 <div className="rightTextAndButton">
                     <h1 className="helloUser">

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { theme } from '../../theme/index';
 
-export default function Logo({ className }: { className: string }) {
+export default function Logo({ className }: { className?: string }) {
     return (
         <LogoStyled className={className} onClick={() => window.location.reload()}>
             Crazee
