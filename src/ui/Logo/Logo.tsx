@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import { theme } from '../../theme/index';
 
-export default function Logo() {
+export default function Logo({ className }: { className: string }) {
     return (
-        <LogoStyled>
+        <LogoStyled className={className} onClick={() => window.location.reload()}>
             Crazee
             <img src={'/images/logo-orange.png'} alt="Logo de tastee burger" />
             Burger
@@ -16,13 +16,14 @@ const LogoStyled = styled.h1`
     justify-content: center;
     align-items: center;
     font-family: 'Amatic SC';
-    font-size: ${theme.fonts.P6};
+    font-size: ${theme.fonts.P5};
     color: ${theme.colors.primary_burger};
-    margin: 0 auto;
-    width: 50%;
-    scale: 2;
+
+    :hover {
+        cursor: pointer;
+    }
 
     img {
-        width: 7vw;
+        width: ${theme.fonts.P6};
     }
 `;

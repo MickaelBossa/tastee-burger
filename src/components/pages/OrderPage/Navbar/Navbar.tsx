@@ -10,9 +10,7 @@ export default function Navbar() {
 
     return (
         <NavbarStyled>
-            <div className="Logo" onClick={() => window.location.reload()}>
-                <Logo />
-            </div>
+            <Logo className="" />
             <div className="rightSubcontainer">
                 <div className="rightTextAndButton">
                     <h1 className="helloUser">
@@ -34,18 +32,12 @@ const NavbarStyled = styled.nav`
     height: ${theme.spacing.xxl};
     border-top-left-radius: ${theme.borderRadius.extraRound};
     border-top-right-radius: ${theme.borderRadius.extraRound};
-
-    .Logo {
-        scale: 0.4;
-        :hover {
-            cursor: pointer;
-        }
-    }
+    padding-left: ${theme.spacing.md};
 
     .rightSubcontainer {
         display: flex;
         align-items: flex-end;
-        margin-right: ${theme.spacing.xxl};
+        margin-right: ${theme.spacing.xl};
     }
 
     .rightTextAndButton {
