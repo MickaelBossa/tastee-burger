@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import { theme } from '../../theme';
 
 export default function BackButton({
     buttonText,
@@ -8,8 +10,18 @@ export default function BackButton({
     buttonLink: string;
 }) {
     return (
-        <Link to={buttonLink}>
-            <button>{buttonText}</button>
-        </Link>
+        <BackButtonStyled>
+            <Link className="backButton" to={buttonLink}>
+                {buttonText}
+            </Link>
+        </BackButtonStyled>
     );
 }
+
+const BackButtonStyled = styled.div`
+    .backButton {
+        text-decoration: none;
+        color: ${theme.colors.greySemiDark};
+        font-size: ${theme.fonts.P0};
+    }
+`;

@@ -12,10 +12,12 @@ export default function OrderPage() {
         <OrderPageStyled>
             <div className="container">
                 <nav>
-                    <Logo />
+                    <div className="Logo">
+                        <Logo />
+                    </div>
                     <div className="rightSubcontainer">
                         <div className="rightTextAndButton">
-                            <h1>
+                            <h1 className="helloUser">
                                 Hey,{' '}
                                 <span className="username">{username}</span>
                             </h1>
@@ -24,13 +26,7 @@ export default function OrderPage() {
                                 buttonText="Se déconnecter"
                             />
                         </div>
-                        <CgProfile
-                            style={{
-                                width: '48px',
-                                height: '48px',
-                                color: 'gray',
-                            }}
-                        />
+                        <CgProfile className="profilIcon" />
                     </div>
                 </nav>
                 <div className="content"></div>
@@ -41,13 +37,12 @@ export default function OrderPage() {
 
 const OrderPageStyled = styled.div`
     display: flex;
-    height: 100vh;
     background-color: ${theme.colors.primary};
 
     .container {
         width: 95vw;
-        height: 95vh;
-        margin: auto;
+        margin: ${theme.spacing.lg} auto;
+        position: relative;
     }
 
     nav {
@@ -55,20 +50,48 @@ const OrderPageStyled = styled.div`
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 20%;
+        height: ${theme.spacing.xxl};
+        border-top-left-radius: ${theme.borderRadius.extraRound};
+        border-top-right-radius: ${theme.borderRadius.extraRound};
+        box-shadow: 0 20px 10px -2px ${theme.colors.greyLight};
+        position: relative;
+    }
+
+    .Logo {
+        scale: 0.4;
     }
 
     .rightSubcontainer {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
+        margin-right: ${theme.spacing.xxl};
+    }
+
+    .rightTextAndButton {
+        margin-right: ${theme.spacing.xs};
+        color: ${theme.colors.greySemiDark};
+    }
+
+    .helloUser {
+        font-size: ${theme.fonts.P2};
+        font-weight: ${theme.weights.medium};
+        text-align: center;
     }
 
     .username {
         color: ${theme.colors.primary};
     }
 
+    .profilIcon {
+        width: ${theme.fonts.P5};
+        height: ${theme.fonts.P5};
+        color: ${theme.colors.greySemiDark};
+    }
+
     .content {
         background-color: ${theme.colors.background_white};
-        height: 80%;
+        height: 84.1vh;
+        border-bottom-left-radius: ${theme.borderRadius.extraRound};
+        border-bottom-right-radius: ${theme.borderRadius.extraRound};
     }
 `;
