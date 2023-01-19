@@ -34,8 +34,6 @@ const NavbarStyled = styled.nav`
     height: ${theme.spacing.xxl};
     border-top-left-radius: ${theme.borderRadius.extraRound};
     border-top-right-radius: ${theme.borderRadius.extraRound};
-    box-shadow: 0 20px 10px -2px ${theme.colors.greyLight};
-    position: relative;
 
     .Logo {
         scale: 0.4;

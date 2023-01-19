@@ -16,16 +16,20 @@ export default function OrderPage() {
 const OrderPageStyled = styled.div`
     display: flex;
     background-color: ${theme.colors.primary};
+    height: 100vh;
 
     .container {
+        display: flex;
+        flex-direction: column;
         width: 95vw;
-        margin: ${theme.spacing.lg} auto;
-        position: relative;
+        height: 95vh;
+        margin: auto;
     }
 
     .content {
+        flex: 1;
+        box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2) inset;
         background-color: ${theme.colors.background_white};
-        height: 84.1vh;
         border-bottom-left-radius: ${theme.borderRadius.extraRound};
         border-bottom-right-radius: ${theme.borderRadius.extraRound};
     }
