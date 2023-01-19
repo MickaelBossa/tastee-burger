@@ -10,7 +10,7 @@ export default function Navbar() {
 
     return (
         <NavbarStyled>
-            <div className="Logo">
+            <div className="Logo" onClick={() => window.location.reload()}>
                 <Logo />
             </div>
             <div className="rightSubcontainer">
@@ -39,6 +39,9 @@ const NavbarStyled = styled.nav`
 
     .Logo {
         scale: 0.4;
+        :hover {
+            cursor: pointer;
+        }
     }
 
     .rightSubcontainer {
