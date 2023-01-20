@@ -22,6 +22,6 @@ const BackButtonStyled = styled.div`
     .backButton {
         text-decoration: none;
         color: ${theme.colors.greySemiDark};
-        font-size: ${theme.fonts.P0};
+        font-size: ${theme.fonts.size.P0};
     }
 `;

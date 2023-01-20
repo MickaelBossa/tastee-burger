@@ -36,8 +36,8 @@ const NavbarStyled = styled.nav`
     }
 
     .profilIcon {
-        width: ${theme.fonts.P5};
-        height: ${theme.fonts.P5};
+        width: ${theme.fonts.size.P5};
+        height: ${theme.fonts.size.P5};
         color: ${theme.colors.greySemiDark};
     }
 `;

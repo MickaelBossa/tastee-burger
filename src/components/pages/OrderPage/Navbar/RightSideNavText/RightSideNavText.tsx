@@ -18,8 +18,8 @@ const RightSideNavTextStyled = styled.div`
     color: ${theme.colors.greySemiDark};
 
     .helloUser {
-        font-size: ${theme.fonts.P2};
-        font-weight: ${theme.weights.medium};
+        font-size: ${theme.fonts.size.P2};
+        font-weight: ${theme.fonts.weights.medium};
         text-align: center;
     }
 
