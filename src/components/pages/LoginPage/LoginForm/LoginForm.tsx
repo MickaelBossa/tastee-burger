@@ -32,6 +32,7 @@ export default function LoginForm() {
                 Icon={<BsPersonCircle />}
             />
             <SubmitButton
+                className="loginSubmitButton"
                 label={'Accédez à mon espace'}
                 Icon={<BsChevronRight />}
             />
@@ -58,5 +59,9 @@ const LoginFormStyled = styled.form`
         font-size: ${theme.fonts.size.P4};
         margin-top: ${theme.spacing.md};
         margin-bottom: ${theme.spacing.sm};
+    }
+
+    .loginSubmitButton {
+        height: ${theme.spacing.xl};
     }
 `;
