@@ -46,6 +46,7 @@ const LoginFormStyled = styled.form`
     text-align: center;
     color: ${theme.colors.white};
     font-family: 'Amatic SC';
+    margin-top: ${theme.spacing.xxl};
 
     h1 {
         font-size: ${theme.fonts.P5};
