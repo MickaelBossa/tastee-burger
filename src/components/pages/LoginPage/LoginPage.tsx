@@ -20,5 +20,7 @@ const LoginPageStyled = styled.div`
 
     .logoLoginPage {
         scale: 2;
+        width: 50vw;
+        margin: 0 auto;
     }
 `;
