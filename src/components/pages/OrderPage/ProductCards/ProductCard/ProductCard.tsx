@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { theme } from '../../../../../theme';
 import SubmitButton from '../../../../../ui/SubmitButton/SubmitButton';
+import { formatPrice } from '../../../../../utils/math';
 
 interface ProductCardProps {
     id: number;
@@ -22,7 +23,7 @@ export default function ProductCard({ item }: { item: ProductCardProps }) {
             <div className="textContainer">
                 <p className="productTitle">{item.title}</p>
                 <div className="priceAndButton">
-                    <p className="productPrice">{item.price} €</p>
+                    <p className="productPrice">{formatPrice(item.price)} €</p>
                     <SubmitButton
                         className="orderSubmitButton"
                         label="Ajouter"
@@ -36,7 +37,6 @@ export default function ProductCard({ item }: { item: ProductCardProps }) {
 const ProductCardStyled = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
     background-color: white;
     width: 240px;
     height: 330px;
@@ -69,6 +69,11 @@ const ProductCardStyled = styled.div`
         font-family: 'Amatic SC';
         font-size: ${theme.fonts.size.P4};
         font-weight: ${theme.fonts.weights.bold};
+        width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-height: 2.6rem;
     }
 
     .priceAndButton {
