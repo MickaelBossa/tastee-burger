@@ -18,7 +18,6 @@ const OrderPageStyled = styled.div`
     display: flex;
     background-color: ${theme.colors.primary};
     min-height: 100vh;
-    overflow: auto;
 
     .container {
         display: flex;
@@ -26,5 +25,10 @@ const OrderPageStyled = styled.div`
         width: 1400px;
         height: 95vh;
         margin: auto;
+        overflow: auto;
+        border-radius: ${theme.borderRadius.extraRound};
+        ::-webkit-scrollbar {
+            display: none;
+        }
     }
 `;
