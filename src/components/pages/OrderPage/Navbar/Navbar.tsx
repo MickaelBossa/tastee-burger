@@ -28,7 +28,6 @@ const NavbarStyled = styled.nav`
     border-top-left-radius: ${theme.borderRadius.extraRound};
     border-top-right-radius: ${theme.borderRadius.extraRound};
     padding-left: ${theme.spacing.md};
-    z-index: 10;
     position: fixed;
     width: 1400px;
 
