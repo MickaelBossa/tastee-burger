@@ -28,6 +28,9 @@ const NavbarStyled = styled.nav`
     border-top-left-radius: ${theme.borderRadius.extraRound};
     border-top-right-radius: ${theme.borderRadius.extraRound};
     padding-left: ${theme.spacing.md};
+    position: fixed;
+    width: 1400px;
+    border-bottom: 1px solid ${theme.colors.greyLight};
 
     .rightSubcontainer {
         display: flex;
@@ -36,8 +39,12 @@ const NavbarStyled = styled.nav`
     }
 
     .profilIcon {
-        width: ${theme.fonts.P5};
-        height: ${theme.fonts.P5};
+        width: ${theme.fonts.size.P5};
+        height: ${theme.fonts.size.P5};
         color: ${theme.colors.greySemiDark};
+    }
+
+    @media (max-width: 1400px) {
+        width: 95vw;
     }
 `;

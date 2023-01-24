@@ -3,7 +3,10 @@ import { theme } from '../../theme/index';
 
 export default function Logo({ className }: { className?: string }) {
     return (
-        <LogoStyled className={className} onClick={() => window.location.reload()}>
+        <LogoStyled
+            className={className}
+            onClick={() => window.location.reload()}
+        >
             Crazee
             <img src={'/images/logo-orange.png'} alt="Logo de tastee burger" />
             Burger
@@ -16,14 +19,14 @@ const LogoStyled = styled.h1`
     justify-content: center;
     align-items: center;
     font-family: 'Amatic SC';
-    font-size: ${theme.fonts.P5};
-    color: ${theme.colors.primary_burger};
+    font-size: ${theme.fonts.size.P5};
+    color: ${theme.colors.primary};
 
     :hover {
         cursor: pointer;
     }
 
     img {
-        width: ${theme.fonts.P6};
+        width: ${theme.fonts.size.P6};
     }
 `;

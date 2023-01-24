@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 import { theme } from '../../../theme';
 import Navbar from './Navbar/Navbar';
+import ProductCards from './ProductCards/ProductCards';
 
 export default function OrderPage() {
     return (
         <OrderPageStyled>
             <div className="container">
                 <Navbar />
-                <div className="content"></div>
+                <ProductCards />
             </div>
         </OrderPageStyled>
     );
@@ -16,21 +17,24 @@ export default function OrderPage() {
 const OrderPageStyled = styled.div`
     display: flex;
     background-color: ${theme.colors.primary};
-    height: 100vh;
+    min-height: 100vh;
 
     .container {
         display: flex;
         flex-direction: column;
-        width: 95vw;
+        width: 1400px;
         height: 95vh;
         margin: auto;
+        overflow: auto;
+        border-radius: ${theme.borderRadius.extraRound};
+        ::-webkit-scrollbar {
+            display: none;
+        }
     }
 
-    .content {
-        flex: 1;
-        box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2) inset;
-        background-color: ${theme.colors.background_white};
-        border-bottom-left-radius: ${theme.borderRadius.extraRound};
-        border-bottom-right-radius: ${theme.borderRadius.extraRound};
+    @media (max-width: 1400px) {
+        .container {
+            width: 95vw;
+        }
     }
 `;
