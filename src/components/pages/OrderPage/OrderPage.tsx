@@ -31,4 +31,10 @@ const OrderPageStyled = styled.div`
             display: none;
         }
     }
+
+    @media (max-width: 1400px) {
+        .container {
+            width: 95vw;
+        }
+    }
 `;

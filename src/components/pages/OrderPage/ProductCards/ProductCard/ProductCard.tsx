@@ -44,4 +44,12 @@ const ProductCardStyled = styled.div`
             max-height: 100%;
         }
     }
+
+    @media (max-width: 1400px) {
+        width: 230px;
+
+        .imgContainer {
+            width: 190px;
+        }
+    }
 `;

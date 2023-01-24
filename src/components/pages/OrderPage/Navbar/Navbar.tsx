@@ -43,4 +43,8 @@ const NavbarStyled = styled.nav`
         height: ${theme.fonts.size.P5};
         color: ${theme.colors.greySemiDark};
     }
+
+    @media (max-width: 1400px) {
+        width: 95vw;
+    }
 `;
