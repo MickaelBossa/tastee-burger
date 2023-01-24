@@ -16,7 +16,7 @@ export default function ProductCard({ item }: { item: ProductCardProps }) {
     return (
         <ProductCardStyled>
             <div className="imgContainer">
-                <img src={item.imageSource} alt={item.imageSource} />
+                <img src={item.imageSource} alt={item.title} />
             </div>
             <ProductCardText title={item.title} price={item.price} />
         </ProductCardStyled>

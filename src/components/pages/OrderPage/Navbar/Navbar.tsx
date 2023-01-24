@@ -30,6 +30,7 @@ const NavbarStyled = styled.nav`
     padding-left: ${theme.spacing.md};
     position: fixed;
     width: 1400px;
+    border-bottom: 1px solid ${theme.colors.greyLight};
 
     .rightSubcontainer {
         display: flex;
