@@ -32,13 +32,17 @@ const SubmitButtonStyled = styled.button`
     align-items: center;
     margin-top: ${theme.spacing.sm};
 
-    :focus,
-    :active,
     :hover {
         background-color: ${theme.colors.white};
         color: ${theme.colors.primary};
         border: 1px solid ${theme.colors.primary};
         cursor: pointer;
+    }
+
+    :active {
+        background-color: ${theme.colors.primary};
+        color: ${theme.colors.white};
+        border: 1px solid ${theme.colors.white};
     }
 
     .chevronRight {
